@@ -21,10 +21,11 @@ provider "aws" {
   }
 }
 
-resource "aws_vpc" "laboratorio_local" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_instance" "servidor_pruebas" {
+  ami           = "ami-localstack"
+  instance_type = "t2.micro"
 
   tags = {
-    Name = "mi-vpc-local-profesional"
+    Name = "MiServidorLocal"
   }
 }
