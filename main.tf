@@ -17,15 +17,14 @@ provider "aws" {
 
   endpoints {
     ec2 = "http://localhost:4566"
-    vpc = "http://localhost:4566"
   }
 }
 
-resource "aws_instance" "servidor_pruebas" {
+resource "aws_instance" "app_server" {
   ami           = "ami-localstack"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "MiServidorLocal"
+    Name = "ExampleAppServerInstance"
   }
 }
