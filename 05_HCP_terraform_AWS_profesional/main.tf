@@ -9,7 +9,7 @@ data "aws_ami" "amazon_linux" {
 
 resource "aws_instance" "servidor" {
   ami           = data.aws_ami.amazon_linux.id
-  instance_type = "t3.micro" # Cambiado a t3.micro
+  instance_type = var.tipo_instancia # Cambiado a t3.micro
 
   tags = {
     Name = "Laboratorio-05-Profesional"
