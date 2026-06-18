@@ -8,9 +8,8 @@ data "aws_ami" "amazon_linux" {
 }
 
 resource "aws_instance" "servidor" {
-  ami               = data.aws_ami.amazon_linux.id
-  instance_type     = "t2.micro"
-  availability_zone = "us-east-1a" # Esta es la zona "ganadora" por capacidad
+  ami           = data.aws_ami.amazon_linux.id
+  instance_type = "t3.micro" # Cambiado a t3.micro
 
   tags = {
     Name = "Laboratorio-05-Profesional"
