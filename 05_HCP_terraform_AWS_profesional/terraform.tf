@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.9.0"
   cloud {
-    organization = "devops-projects-cloud" # Cambia por tu nombre de organización
+    organization = "vbelmontetech-projects-cloud" # Cambia por tu nombre de organización
     workspaces {
       name = "lab05-aws-ec2-instancia"
     }
